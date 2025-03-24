@@ -7,11 +7,11 @@
   },
   "servers": [
     {
-      "url": "https://din-n8n-url/webhook"
+      "url": "https://lisawalder.app.n8n.cloud/webhook"
     }
   ],
   "paths": {
-    "/gpt-proxy": {
+    "/9ce35452-aee2-4747-bff8-b9b74c53d461": {
       "post": {
         "operationId": "get_survey_data",
         "summary": "Hämtar enkätdata från n8n-agent",
@@ -28,7 +28,9 @@
                     "description": "Organisation eller kundnamn från enkäten"
                   }
                 },
-                "required": ["organisation"]
+                "required": [
+                  "organisation"
+                ]
               }
             }
           }
