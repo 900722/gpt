@@ -1,0 +1,59 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "get_survey_data",
+    "description": "Hämta all data från AI-mognadsanalys i Google Sheets via n8n.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://din-n8n-url/webhook"
+    }
+  ],
+  "paths": {
+    "/gpt-proxy": {
+      "post": {
+        "operationId": "get_survey_data",
+        "summary": "Hämtar enkätdata från n8n-agent",
+        "description": "Skicka in kund/organisation och få tillbaka all enkätdata från Google Sheets",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "organisation": {
+                    "type": "string",
+                    "description": "Organisation eller kundnamn från enkäten"
+                  }
+                },
+                "required": ["organisation"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Rådata från Google Sheets",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
