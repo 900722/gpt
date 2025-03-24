@@ -7,11 +7,11 @@
   },
   "servers": [
     {
-      "url": "https://lisawalder.app.n8n.cloud/webhook"
+      "url": "https://lisawalder.app.n8n.cloud/webhook/9ce35452-aee2-4747-bff8-b9b74c53d461"
     }
   ],
   "paths": {
-    "/9ce35452-aee2-4747-bff8-b9b74c53d461": {
+    "/": {
       "post": {
         "operationId": "get_survey_data",
         "summary": "Hämtar enkätdata från n8n-agent",
